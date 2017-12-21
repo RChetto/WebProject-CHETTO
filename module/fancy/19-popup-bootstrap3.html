@@ -1,0 +1,104 @@
+<!-- 
+/**
+
+  The Initial Developer of the Original Code is
+  Matthieu  - http://www.programmation-facile.com/
+  Portions created by the Initial Developer are Copyright (C) 2013
+  the Initial Developer. All Rights Reserved.
+
+  Contributor(s) :
+
+ */
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+ --> 
+
+
+
+<!-- permet au CSS de déterminer la résolution de l'écran en fonction du périphérique -->
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+<link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap.css"> 
+
+<script src="bootstrap-3.2.0-dist/js/jquery-1.10.2.js"></script> 
+<script src="bootstrap-3.2.0-dist/js/bootstrap.js"></script> 
+
+
+
+
+<script type="text/javascript"> 
+$(document).ready(function()
+{ 
+
+    $("#id-popup").modal("show");// affiche la popup au chargement de la page
+
+
+}); 
+</script>
+
+
+<!-- La mise en forme du contenu de la div via la classe .container
+La classe .container permet de définir la largeur et la disposition du canevas de la page. -->
+<div class="container"> 
+    
+    <!-- exemple de popup -->
+    <p><button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#id-popup">Afficher la PopUp</button></p>
+    
+
+    <!-- construction de la popup 
+          data-backdrop="false" pour supprimer le voile au-dessus de la popup
+          data-keyboard="false" pour supprimer la touche Echap --> 
+    <div class="modal fade" id="id-popup" tabindex="-1" role="dialog" aria-labelledby="titrePopUp" aria-hidden="true"> 
+    
+      <div class="modal-dialog"> 
+
+        <div class="modal-content"> 
+            
+          <!-- le titre de la popup --> 
+          <div class="modal-header"> 
+          <h4 style="color:blue"class="modal-title" id="titrePopUp">Vous connecter : </h4>
+          </div> 
+          
+          <!-- le contenu HTML de la popup --> 
+          <div class="modal-body"> 
+         			<div class="col-md-offset-3 col-md-6 ">
+								<form class="form-signin">
+
+										<h2 class="form-signin-heading"> Vous connecter </h2>
+
+										<label for="inputEmail" class="sr-only"> Pseudo </label>
+										<input type="text" id="inputEmail" class="form-control" placeholder="Email ou Pseudo" required autofocus>
+
+										<label for="inputPassword" class="sr-only">Password</label>
+										<input type="password" id="inputPassword" class="form-control" placeholder="Mot de passe" required>
+
+										<div class="checkbox">
+												<label>
+												    <input type="checkbox" value="remember-me"> Remember me
+												</label>
+										</div>
+										<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+								</form>
+						</div>
+          </div>
+          
+          <!-- le pied de page de la popup --> 
+          <div class="modal-footer" styme="display:none"> 
+          
+          </div> 
+
+        </div> 
+
+      </div> 
+
+    </div>
+
+</div> 
+
+
+<footer> 
+	<hr> 
+	<p>Copyright www.Developpement-Facile.com 2014</p>  
+</footer> 
+
+</body> 
+</html>

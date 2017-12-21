@@ -1,0 +1,77 @@
+?>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+
+
+		<link rel="stylesheet" href="/../fancy/bootstrap-3.2.0-dist/css/bootstrap.css"> 
+
+		<script src="module/fancy/bootstrap-3.2.0-dist/js/jquery-1.10.2.js"></script> 
+		<script src="module/fancy/bootstrap-3.2.0-dist/js/bootstrap.js"></script> 
+
+
+		<script type="text/javascript"> 
+		$(document).ready(function(){ 
+
+		    $("#id-popup").modal("show");// affiche la popup au chargement de la page
+
+
+		}); 
+		</script>
+
+
+		<!-- La mise en forme du contenu de la div via la classe .container
+		La classe .container permet de définir la largeur et la disposition du canevas de la page. -->
+		
+		    
+		    <!-- exemple de popup -->
+		    <a><button class="btn btn-primary btn-lg" style="display:none"  data-toggle="modal" data-target="#id-popup">Afficher la PopUp</button></a>
+		    
+
+		    <!-- construction de la popup 
+		          data-backdrop="false" pour supprimer le voile au-dessus de la popup
+		          data-keyboard="false" pour supprimer la touche Echap --> 
+		    <div class="modal fade" data-backdrop="false" data-keyboard="false" id="id-popup" tabindex="-1" role="dialog" aria-labelledby="titrePopUp" aria-hidden="true"> 
+		    
+		      <div class="modal-dialog"> 
+
+		        <div class="modal-content"> 
+		           
+			          	
+		 
+		          
+		          <!-- le contenu HTML de la popup --> 
+		          <div class="modal-body"> 
+		          	 <div class="col-md-offset-3 col-md-6 ">
+			         
+		        	</div>
+
+		         			<div class="col-md-offset-3 col-md-6 ">
+		         						 <a href="index.php?page=inscription" class="btn btn-default">Inscrivez vous</a>
+		         						 <br></br>
+										<form id ="form" class="form-signin" method="post" action ="index.php?page=connexion&action=connection">
+
+									       	
+									        <label for="inputEmail" class="sr-only">Login</label>
+									        <input type="text" name="nom" class="form-control" placeholder="Login" required autofocus/>
+									        <label for="inputPassword" class="sr-only">Mot de passe</label>
+									        <input type="password" name="password" class="form-control" placeholder="Password" required>
+									        <div class="checkbox">
+									        
+									        </div>
+									        <button class="btn btn-default" id="submit" type="Submit">Connectez vous</button>
+								      	</form>
+								</div>
+		          </div>
+		          
+		          <!-- le pied de page de la popup --> 
+		          <div class="modal-footer" styme="display:none"> 
+		          
+		          </div> 
+
+		        </div> 
+
+		    </div> 
+
+		</div>
+
+<?php
